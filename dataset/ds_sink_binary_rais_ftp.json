@@ -1,0 +1,18 @@
+{
+	"name": "ds_sink_binary_rais_ftp",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "year/2022/landing_zone",
+				"fileSystem": "rais"
+			}
+		}
+	}
+}
