@@ -1,0 +1,14 @@
+{
+	"name": "FTP_MTE_RAIS",
+	"properties": {
+		"annotations": [],
+		"type": "FtpServer",
+		"typeProperties": {
+			"host": "ftp.mtps.gov.br",
+			"port": "",
+			"enableSsl": false,
+			"enableServerCertificateValidation": false,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
