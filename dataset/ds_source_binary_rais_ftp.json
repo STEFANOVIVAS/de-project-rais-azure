@@ -1,0 +1,17 @@
+{
+	"name": "ds_source_binary_rais_ftp",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "FTP_MTE_RAIS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "FtpServerLocation",
+				"folderPath": "/pdet/microdados/RAIS/2022"
+			}
+		}
+	}
+}
