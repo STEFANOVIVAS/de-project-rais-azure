@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "FtpServerLocation",
-				"folderPath": "/pdet/microdados/RAIS/2022"
+				"folderPath": "/pdet/microdados/RAIS/2021"
 			}
 		}
 	}
