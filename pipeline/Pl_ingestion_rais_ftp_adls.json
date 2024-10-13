@@ -5,8 +5,6 @@
 			{
 				"name": "Copy data from FTP server to ADLS",
 				"type": "Copy",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -70,7 +68,7 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
-							"wildcardFolderPath": "year/2022/landing_zone",
+							"wildcardFolderPath": "2021/landing_zone",
 							"wildcardFileName": "*",
 							"enablePartitionDiscovery": false
 						},
