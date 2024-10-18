@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "2021/raw_layer/estabelecimentos",
+				"folderPath": "2021/raw_layer/estabelecimentos/compactado",
 				"fileSystem": "rais"
 			}
 		}
