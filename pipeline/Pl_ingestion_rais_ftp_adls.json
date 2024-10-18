@@ -46,7 +46,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_sink_binary_rais_ftp",
+						"referenceName": "ds_sink_binary_rais_vinculos_adls",
 						"type": "DatasetReference"
 					}
 				]
@@ -95,7 +95,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_sink_binary_rais_ftp",
+						"referenceName": "ds_sink_binary_rais_estab_adls",
 						"type": "DatasetReference"
 					}
 				]

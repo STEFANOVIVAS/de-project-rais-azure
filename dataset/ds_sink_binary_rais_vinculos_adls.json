@@ -1,0 +1,18 @@
+{
+	"name": "ds_sink_binary_rais_vinculos_adls",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "2021/raw_layer/vinculos",
+				"fileSystem": "rais"
+			}
+		}
+	}
+}
