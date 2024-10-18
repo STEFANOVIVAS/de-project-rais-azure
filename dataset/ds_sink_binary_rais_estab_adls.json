@@ -1,5 +1,5 @@
 {
-	"name": "ds_sink_binary_rais_ftp",
+	"name": "ds_sink_binary_rais_estab_adls",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage",
