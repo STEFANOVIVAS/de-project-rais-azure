@@ -20,7 +20,10 @@
 						"storeSettings": {
 							"type": "FtpReadSettings",
 							"recursive": true,
+							"wildcardFolderPath": "/pdet/microdados/RAIS/2021",
+							"wildcardFileName": "RAIS_VINC_*.7z",
 							"useBinaryTransfer": true,
+							"deleteFilesAfterCompletion": false,
 							"disableChunking": false
 						},
 						"formatSettings": {
@@ -67,6 +70,7 @@
 							"type": "FtpReadSettings",
 							"recursive": true,
 							"wildcardFolderPath": "/pdet/microdados/RAIS/2021",
+							"wildcardFileName": "RAIS_ESTAB_PUB.7z",
 							"useBinaryTransfer": true,
 							"deleteFilesAfterCompletion": false,
 							"disableChunking": false
