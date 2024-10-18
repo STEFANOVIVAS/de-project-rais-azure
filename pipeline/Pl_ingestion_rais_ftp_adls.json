@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data from FTP server to ADLS",
+				"name": "Copy vinculos data from FTP server to ADLS",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -49,10 +49,8 @@
 				]
 			},
 			{
-				"name": "Copy data1",
+				"name": "Copy estabelecimentos data from FTP server to ADLS",
 				"type": "Copy",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -64,51 +62,36 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "DelimitedTextSource",
+						"type": "BinarySource",
 						"storeSettings": {
-							"type": "AzureBlobFSReadSettings",
+							"type": "FtpReadSettings",
 							"recursive": true,
-							"wildcardFolderPath": "2021/landing_zone",
-							"wildcardFileName": "*",
-							"enablePartitionDiscovery": false
+							"wildcardFolderPath": "/pdet/microdados/RAIS/2021",
+							"useBinaryTransfer": true,
+							"deleteFilesAfterCompletion": false,
+							"disableChunking": false
 						},
 						"formatSettings": {
-							"type": "DelimitedTextReadSettings",
-							"compressionProperties": {
-								"type": "ZipDeflateReadSettings"
-							}
+							"type": "BinaryReadSettings"
 						}
 					},
 					"sink": {
-						"type": "DelimitedTextSink",
+						"type": "BinarySink",
 						"storeSettings": {
 							"type": "AzureBlobFSWriteSettings"
-						},
-						"formatSettings": {
-							"type": "DelimitedTextWriteSettings",
-							"quoteAllText": true,
-							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false,
-					"translator": {
-						"type": "TabularTranslator",
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
-					}
+					"enableStaging": false
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_source_zip_adls",
+						"referenceName": "ds_source_binary_rais_ftp",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_sink_adls_csv",
+						"referenceName": "ds_sink_binary_rais_ftp",
 						"type": "DatasetReference"
 					}
 				]
