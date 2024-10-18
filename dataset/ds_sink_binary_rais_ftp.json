@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "2021/raw_layer/landing_zone",
+				"folderPath": "2021/raw_layer/vinculos",
 				"fileSystem": "rais"
 			}
 		}
