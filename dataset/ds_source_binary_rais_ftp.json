@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "FtpServerLocation",
+				"fileName": "RAIS_ESTAB_PUB.7z",
 				"folderPath": "/pdet/microdados/RAIS/2021"
 			}
 		}
