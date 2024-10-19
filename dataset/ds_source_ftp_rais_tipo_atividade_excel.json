@@ -1,0 +1,26 @@
+{
+	"name": "ds_source_ftp_rais_tipo_atividade_excel",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "FTP_MTE_RAIS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "subclasse 2.0",
+			"location": {
+				"type": "FtpServerLocation",
+				"fileName": "RAIS_vinculos_layout2020.xls",
+				"folderPath": "/pdet/microdados/RAIS/Layouts/vínculos"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "CNAE 2.0 Subclas",
+				"type": "String"
+			}
+		]
+	}
+}
