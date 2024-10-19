@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "rais_ocupacao.xls",
+				"fileName": "rais_ocupacao.csv",
 				"folderPath": "2021/raw_layer/ocupacao",
 				"fileSystem": "rais"
 			},
