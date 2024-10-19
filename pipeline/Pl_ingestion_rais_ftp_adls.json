@@ -213,7 +213,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_sink_adls_excel_rais_tipo_atividade",
+						"referenceName": "ds_sink_adls_excel_rais_municipios",
 						"type": "DatasetReference"
 					}
 				]
@@ -270,7 +270,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_sink_adls_excel_rais_ocupacao",
+						"referenceName": "ds_sink_adls_excel_rais_tipo_atividade",
 						"type": "DatasetReference"
 					}
 				]
