@@ -8,11 +8,11 @@
 		"AzureDataLakeStorage_accountKey": {
 			"value": ""
 		},
-		"FTP_MTE_RAIS_properties_typeProperties_host": {
-			"value": "ftp.mtps.gov.br"
-		},
 		"AzureDataLakeStorage_properties_typeProperties_url": {
 			"value": "https://raispipeline.dfs.core.windows.net/"
+		},
+		"FTP_MTE_RAIS_properties_typeProperties_host": {
+			"value": "ftp.mtps.gov.br"
 		}
 	}
 }
