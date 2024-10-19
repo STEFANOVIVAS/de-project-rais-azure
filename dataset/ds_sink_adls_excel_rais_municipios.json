@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "rais_municipios.csv",
 				"folderPath": "2021/raw_layer/municipios",
 				"fileSystem": "rais"
 			},
