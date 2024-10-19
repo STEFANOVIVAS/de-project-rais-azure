@@ -1,5 +1,5 @@
 {
-	"name": "ds_sink_excel_rais_layout_vinculos_adls",
+	"name": "ds_sink_adls_excel_rais_ocupacao",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage",
@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "2021/raw_layer/layout_vinculos",
+				"fileName": "rais_ocupacao.xls",
+				"folderPath": "2021/raw_layer/ocupacao",
 				"fileSystem": "rais"
 			},
 			"columnDelimiter": ",",
