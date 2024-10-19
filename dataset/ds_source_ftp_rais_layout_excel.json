@@ -1,0 +1,21 @@
+{
+	"name": "ds_source_ftp_rais_layout_excel",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "FTP_MTE_RAIS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "FtpServerLocation"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": false,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

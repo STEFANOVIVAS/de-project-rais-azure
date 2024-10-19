@@ -118,18 +118,17 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "BinarySource",
+						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "FtpReadSettings",
 							"recursive": true,
 							"wildcardFolderPath": "/pdet/microdados/RAIS/Layouts/vínculos",
 							"wildcardFileName": "RAIS_vinculos_layout2020.xls",
 							"useBinaryTransfer": true,
-							"deleteFilesAfterCompletion": false,
 							"disableChunking": false
 						},
 						"formatSettings": {
-							"type": "BinaryReadSettings"
+							"type": "DelimitedTextReadSettings"
 						}
 					},
 					"sink": {
@@ -143,11 +142,19 @@
 							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_source_binary_rais_ftp",
+						"referenceName": "ds_source_ftp_rais_layout_excel",
 						"type": "DatasetReference"
 					}
 				],
@@ -172,18 +179,17 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "BinarySource",
+						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "FtpReadSettings",
 							"recursive": true,
 							"wildcardFolderPath": "/pdet/microdados/RAIS/Layouts/estabelecimento",
 							"wildcardFileName": "RAIS_estabelecimento_layout2018e2019.xls",
 							"useBinaryTransfer": true,
-							"deleteFilesAfterCompletion": false,
 							"disableChunking": false
 						},
 						"formatSettings": {
-							"type": "BinaryReadSettings"
+							"type": "DelimitedTextReadSettings"
 						}
 					},
 					"sink": {
@@ -197,11 +203,19 @@
 							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_source_binary_rais_ftp",
+						"referenceName": "ds_source_ftp_rais_layout_excel",
 						"type": "DatasetReference"
 					}
 				],
