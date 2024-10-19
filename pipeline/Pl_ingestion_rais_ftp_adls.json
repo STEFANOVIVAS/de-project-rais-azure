@@ -105,7 +105,7 @@
 				]
 			},
 			{
-				"name": "Copy vinculos layout from FTP server to ADLS",
+				"name": "Copy ocupacao data from FTP server to ADLS",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -118,17 +118,13 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "DelimitedTextSource",
+						"type": "ExcelSource",
 						"storeSettings": {
 							"type": "FtpReadSettings",
 							"recursive": true,
-							"wildcardFolderPath": "/pdet/microdados/RAIS/Layouts/vínculos",
-							"wildcardFileName": "RAIS_vinculos_layout2020.xls",
+							"enablePartitionDiscovery": false,
 							"useBinaryTransfer": true,
 							"disableChunking": false
-						},
-						"formatSettings": {
-							"type": "DelimitedTextReadSettings"
 						}
 					},
 					"sink": {
@@ -154,19 +150,19 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_source_ftp_rais_layout_excel",
+						"referenceName": "ds_source_ftp_rais_ocupacao_excel",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_sink_excel_rais_layout_vinculos_adls",
+						"referenceName": "ds_sink_adls_excel_rais_ocupacao",
 						"type": "DatasetReference"
 					}
 				]
 			},
 			{
-				"name": "Copy estabelecimentos layout from FTP server to ADLS",
+				"name": "Copy municipios data from FTP server to ADLS",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -179,17 +175,13 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "DelimitedTextSource",
+						"type": "ExcelSource",
 						"storeSettings": {
 							"type": "FtpReadSettings",
 							"recursive": true,
-							"wildcardFolderPath": "/pdet/microdados/RAIS/Layouts/estabelecimento",
-							"wildcardFileName": "RAIS_estabelecimento_layout2018e2019.xls",
+							"enablePartitionDiscovery": false,
 							"useBinaryTransfer": true,
 							"disableChunking": false
-						},
-						"formatSettings": {
-							"type": "DelimitedTextReadSettings"
 						}
 					},
 					"sink": {
@@ -215,13 +207,70 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_source_ftp_rais_layout_excel",
+						"referenceName": "ds_source_ftp_rais_municipios_excel",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_sink_excel_rais_layout_vinculos_adls",
+						"referenceName": "ds_sink_adls_excel_rais_tipo_atividade",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Copy tipo de atividade from FTP server to ADLS_copy1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "ExcelSource",
+						"storeSettings": {
+							"type": "FtpReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false,
+							"useBinaryTransfer": true,
+							"disableChunking": false
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "ds_source_ftp_rais_tipo_atividade_excel",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ds_sink_adls_excel_rais_ocupacao",
 						"type": "DatasetReference"
 					}
 				]
