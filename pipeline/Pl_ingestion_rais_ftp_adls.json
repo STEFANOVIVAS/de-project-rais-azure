@@ -5,6 +5,8 @@
 			{
 				"name": "Copy vinculos data from FTP server to ADLS",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -54,6 +56,8 @@
 			{
 				"name": "Copy estabelecimentos data from FTP server to ADLS",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -101,7 +105,7 @@
 				]
 			},
 			{
-				"name": "Copy vinculos layout data from FTP server to ADLS",
+				"name": "Copy vinculos layout from FTP server to ADLS",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
