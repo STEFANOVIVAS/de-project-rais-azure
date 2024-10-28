@@ -1,10 +1,4 @@
 # Databricks notebook source
-import py7zr
-with py7zr.SevenZipFile("/dbfs/mnt/raispipeline/rais/year/2022/landing_zone/RAIS_ESTAB_PUB.7z", mode='r') as z:
-    z.extractall("/dbfs/mnt/raispipeline/rais/year/2022/raw_layer/")
-
-# COMMAND ----------
-
 def mount_adls(storage_account,container):
     # get secrets from key vault
     
