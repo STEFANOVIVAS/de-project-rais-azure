@@ -1,4 +1,8 @@
 # Databricks notebook source
+from pyspark.sql.functions import current_timestamp,lit
+
+# COMMAND ----------
+
 df_estabelecimentos=spark.read.format('csv').options(header=True, delimiter=';',encoding='ISO-8859-1').load('/Volumes/raw/rais/estabelecimentos')
 df_estabelecimentos.display()
 

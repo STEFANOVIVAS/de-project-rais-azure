@@ -126,6 +126,8 @@ def cast_string_to_integer(columns,df):
         df=df.withColumn(column,df[column].cast('integer'))
     return df
     
+integer_format_columns=["Qtd Hora Contr", "Idade", "Qtd Dias Afastamento","Ano Chegada Brasil"]
+df_rais_brasil=cast_string_to_integer(integer_format_columns, df_rais_brasil)
 
 # COMMAND ----------
 
@@ -145,6 +147,9 @@ def cast_string_to_double(columns_list, df):
         df = df.withColumn(column, regexp_replace(column, ',', '.'))
         df=df.withColumn(column,df[column].cast(DoubleType()))
     return df
+double_format_columns=["Tempo Emprego","Vl Remun Dezembro Nom","Vl Remun Dezembro (SM)","Vl Remun Média Nom","Vl Remun Média (SM)","Vl Rem Janeiro SC","Vl Rem Fevereiro SC","Vl Rem Março SC","Vl Rem Abril SC","Vl Rem Maio SC","Vl Rem Junho SC","Vl Rem Julho SC","Vl Rem Agosto SC","Vl Rem Setembro SC","Vl Rem Outubro SC","Vl Rem Novembro SC"]
+df_rais_brasil=cast_string_to_double(double_format_columns,df_rais_brasil)
+
 
 # COMMAND ----------
 
